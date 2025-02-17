@@ -52,7 +52,7 @@ require("lazy").setup({
 			"xiyaowong/transparent.nvim",
 		},
 		{ -- COLORSCHEME
-			"iagorrr/noctis-high-contrast.nvim",
+			"navarasu/onedark.nvim",
 			lazy = false,
 			priority=1000
 		},
@@ -122,7 +122,36 @@ require("lazy").setup({
 })
 
 -- COLORSCHEME CONFIG
-vim.cmd.colorscheme("noctishc")
+vim.cmd.colorscheme("onedark")
+
+require('onedark').setup {
+	style = 'deep',
+	highlights = {
+    ["@keyword"] = {fg = '$blue'},
+    ["@keyword.conditional"] = {fg = '$blue'},
+    ["@keyword.directive"] = {fg = '$blue'},
+    ["@keyword.exception"] = {fg = '$blue'},
+    ["@keyword.function"] = {fg = '$blue'},
+    ["@keyword.import"] = {fg = '$blue'},
+    ["@keyword.operator"] = {fg = '$blue'},
+    ["@keyword.repeat"] = {fg = '$blue'},
+    ["@boolean"] = {fg = '$yellow'},
+    ["@character"] = {fg = '$yellow'},
+    ["@constant"] = {fg = '$yellow'},
+    ["@constant.builtin"] = {fg = '$yellow'},
+    ["@constant.macro"] = {fg = '$yellow'},
+    ["@heading"] = {fg = '$yellow'},
+    ["@number"] = {fg = '$yellow'},
+    ["@number.float"] = {fg = '$yellow'},
+    ["@string.special.symbol"] = {fg = '$yellow'},
+    ["@string.escape"] = {fg = '$yellow'},
+    ["@type.builtin"] = {fg = '$yellow'},
+    ["@variable.parameter"] = {fg = '$blue'},
+    ["@variable.builtin"] = {fg = '$blue'},
+    ["@function"] = {fg = '$purple'},
+  }
+}
+require('onedark').load()
 
 -- TELESCOPE CONFIG (simplified)
 local builtin = require('telescope.builtin')
